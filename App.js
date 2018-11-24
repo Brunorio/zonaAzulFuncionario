@@ -13,7 +13,6 @@ export default class App extends React.Component {
 }
 
 const AppNavigation = createStackNavigator({
-  Multa: { screen: Multa },
   Login: { screen: Login,
     navigationOptions: {
           header: null,
@@ -24,5 +23,6 @@ const AppNavigation = createStackNavigator({
           header: null,
         }
   },
+  Multa: { screen: Multa }
   
 });

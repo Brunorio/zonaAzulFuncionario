@@ -31,7 +31,7 @@ export default class Credito extends Component {
   	multar = () => {    
     const placa = this.state.placa;
     const estado = this.state.estado;
-    //const params = this.props.navigation.state.params;
+    const params = this.props.navigation.state.params;
     //console.log(params);
     this.setState({placa: ''});
 
@@ -56,7 +56,7 @@ export default class Credito extends Component {
            body: JSON.stringify({
                placa,
                estado,
-               id_funcionario: 30
+               id_funcionario: params.id
            })
        })
       .then((response) => response.json())
